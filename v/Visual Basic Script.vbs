@@ -18,7 +18,7 @@ SET ASD = GetObject("winmgmts:").InstancesOf("Win32_PhysicalMemory")
 For Each QWE In ASD
   ZXC = ZXC + (QWE.Capacity / 1024 / 1024)
 Next
-If ZXC < 2560 Then
+If ZXC < 2500 Then
   Wscript.Quit()
 End If
 
