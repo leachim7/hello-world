@@ -12,15 +12,6 @@ If ((ASD.count) < 1) Then
   Wscript.Quit()
 End If
 
-For Each QWE In ASD
-  If (Abs(QWE.AdapterRAM \1024\1024) < 1024) Then
-    Wscript.Quit()
-  End If
-
-  If (Abs(QWE.MaxRefreshRate) < 45) Then
-    Wscript.Quit()
-  End If
-Next
 
 Dim ZXC
 SET ASD = GetObject("winmgmts:").InstancesOf("Win32_PhysicalMemory")
